@@ -7,6 +7,7 @@ In this notebook, data related to customers, products, and orders are explored, 
 df_customers.to_csv('data/cleaned_data/customers.csv', index=False)
 df_products.to_csv('data/cleaned_data/products.csv', index=False)
 
+
 # Project Structure
 
 ## 1. Data Exploration and Cleaning (`data_exploration.ipynb`)
