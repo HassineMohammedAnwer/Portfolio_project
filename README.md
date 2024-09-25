@@ -6,8 +6,7 @@ In this notebook, data related to customers, products, and orders are explored, 
 ```python
 df_customers.to_csv('data/cleaned_data/customers.csv', index=False)
 df_products.to_csv('data/cleaned_data/products.csv', index=False)
-
-
+```
 # Project Structure
 
 ## 1. Data Exploration and Cleaning (`data_exploration.ipynb`)
@@ -16,6 +15,7 @@ In this notebook, data related to customers, products, and orders are explored, 
 ```python
 df_customers.to_csv('data/cleaned_data/customers.csv', index=False)
 df_products.to_csv('data/cleaned_data/products.csv', index=False)
+```
 
 ## 2. Data Preparation (data_preparation.ipynb)
 In this notebook, the cleaned data is preprocessed for modeling. The process includes normalizing numerical features, encoding categorical features, and generating matrices for the recommendation models. The preprocessed data is saved:
@@ -23,6 +23,7 @@ In this notebook, the cleaned data is preprocessed for modeling. The process inc
 ```python
 df_products.to_csv('data/prepared_data/products.csv', index=False)
 df_orders.to_csv('data/prepared_data/orders.csv', index=False)
+```
 
 ## 3. Content-Based Modeling (final_modeling_content-based.ipynb)
 A content-based filtering approach is applied using product features and customer interactions. PCA (Principal Component Analysis) is used to reduce data dimensionality. Different similarity measures are evaluated:
@@ -58,6 +59,8 @@ decoded = Dense(128, activation='relu')(decoded)
 output_layer = Dense(n_inputs, activation='sigmoid')(decoded)
 autoencoder = Model(inputs=input_layer, outputs=output_layer)
 autoencoder.compile(optimizer=Adam(learning_rate=0.001), loss='mse')
+```
+
 Variational Autoencoder (VAE)
 A more complex model with regularization to ensure a continuous latent space for better recommendations.
 
