@@ -7,15 +7,6 @@ In this notebook, data related to customers, products, and orders are explored, 
 df_customers.to_csv('data/cleaned_data/customers.csv', index=False)
 df_products.to_csv('data/cleaned_data/products.csv', index=False)
 ```
-# Project Structure
-
-## 1. Data Exploration and Cleaning (`data_exploration.ipynb`)
-In this notebook, data related to customers, products, and orders are explored, cleaned, and visualized. This step helps handle irrelevant or missing data and extract important features. After cleaning, the processed data is saved for future use:
-
-```python
-df_customers.to_csv('data/cleaned_data/customers.csv', index=False)
-df_products.to_csv('data/cleaned_data/products.csv', index=False)
-```
 
 ## 2. Data Preparation (data_preparation.ipynb)
 In this notebook, the cleaned data is preprocessed for modeling. The process includes normalizing numerical features, encoding categorical features, and generating matrices for the recommendation models. The preprocessed data is saved:
